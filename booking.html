@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Package | Jerry Travel Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carter+One&family=Gabarito:wght@400..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paprika&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <script src="booking.js" defer></script>
+</head>
+<body>
+  <header><h2 class="logo">jerry travel hub</h2><nav>
+    <a href="index.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="places.html">Places</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="booking.html">BOOK NOW</a>
+
+  </nav></header>
+  <div class="page-title"><h1>Book your trip</h1><p>Choose your package and group size</p></div>
+  <main class="section">
+    <div class="booking-panel">
+      <h2>Trip details</h2>
+      <p id="booking-user" class="form-message"></p>
+      <form id="booking-form">
+        <label for="package-select">Package</label>
+        <select id="package-select" required>
+          <option value="maldives" data-rate="25000" data-base-days="3">Maldives — ₹25,000 / person</option>
+          <option value="paris" data-rate="55000" data-base-days="5">Paris — ₹55,000 / person</option>
+          <option value="dubai" data-rate="40000" data-base-days="4">Dubai — ₹40,000 / person</option>
+          <option value="malaysia" data-rate="90000" data-base-days="6">Malaysia — ₹90,000 / person</option>
+        </select>
+        <label for="duration-select">Trip length</label>
+        <select id="duration-select" required>
+          <option data-days="3" data-nights="4">3 days / 4 nights</option>
+          <option data-days="3" data-nights="2">3 days / 2 nights</option>
+          <option data-days="4" data-nights="3">4 days / 3 nights</option>
+          <option data-days="5" data-nights="4">5 days / 4 nights</option>
+          <option data-days="6" data-nights="5">6 days / 5 nights</option>
+        </select>
+        <label for="guests">Number of travellers</label>
+        <input id="guests" type="number" min="1" max="20" value="3" required>
+        <div class="booking-quote" aria-live="polite">
+          <p id="booking-summary">3 travellers · 3 days / 4 nights</p>
+          <p class="price">Estimated total: <strong id="booking-total">₹75,000</strong></p>
+        </div>
+        <p class="booking-note">Total uses the package price shown per person, adjusted for selected trip days. Final pricing can be confirmed with the travel provider.</p>
+        <button class="button" type="submit">Confirm booking</button>
+        <p id="booking-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+  <footer><p>© 2026 jerry travel hub. All Rights Reserved.</p></footer>
+</body>
+</html>
